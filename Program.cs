@@ -1,2 +1,7 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using (HttpClient client = new HttpClient()) 
+{
+    
+
+
+    string resposta = await client.GetStringAsync("https://www.cheapshark.com/api/1.0/deals");
+}

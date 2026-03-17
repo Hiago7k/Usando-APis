@@ -18,16 +18,28 @@
 
 
 
-try
+//try
+//{
+//    Console.WriteLine("Digite um numero: ");
+//    decimal a = Convert.ToDecimal(Console.ReadLine()!);
+//    Console.WriteLine("Digite outro numero: ");
+//    decimal b = Convert.ToDecimal(Console.ReadLine()!);
+//    decimal resposta = a / b;
+//    Console.WriteLine(resposta);
+//}
+//catch (Exception  ex)
+//{
+//    Console.WriteLine($"Erro na divisao {ex:Message}");
+//}
+
+// Atividade 3
+
+List<int> numeros = new List<int> 
 {
-    Console.WriteLine("Digite um numero: ");
-    decimal a = Convert.ToDecimal(Console.ReadLine()!);
-    Console.WriteLine("Digite outro numero: ");
-    decimal b = Convert.ToDecimal(Console.ReadLine()!);
-    decimal resposta = a / b;
-    Console.WriteLine(resposta);
-}
-catch (Exception  ex)
+    1, 2, 3 ,4 ,5 ,6,7, 8, 9
+};
+
+for (int i = 3; i > 3; i--)
 {
-    Console.WriteLine($"Erro na divisao {ex:Message}");
+    Console.WriteLine(i);
 }

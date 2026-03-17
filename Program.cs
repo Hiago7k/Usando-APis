@@ -16,7 +16,18 @@
 
 // Atividade 2
 
-Console.WriteLine("Digite um numero: ");
-decimal a = Convert.ToDecimal(Console.ReadLine()!);
-Console.WriteLine("Digite outro numero: ");
-decimal b = Convert.ToDecimal(Console.ReadLine()!);
+
+
+try
+{
+    Console.WriteLine("Digite um numero: ");
+    decimal a = Convert.ToDecimal(Console.ReadLine()!);
+    Console.WriteLine("Digite outro numero: ");
+    decimal b = Convert.ToDecimal(Console.ReadLine()!);
+    decimal resposta = a / b;
+    Console.WriteLine(resposta);
+}
+catch (Exception  ex)
+{
+    Console.WriteLine($"Erro na divisao {ex:Message}");
+}

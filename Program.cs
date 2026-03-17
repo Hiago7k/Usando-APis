@@ -13,44 +13,18 @@
 
 //}
 
+// Manipulando APi GOT
 
-// Atividade 2
+using System;
 
-
-
-//try
-//{
-//    Console.WriteLine("Digite um numero: ");
-//    decimal a = Convert.ToDecimal(Console.ReadLine()!);
-//    Console.WriteLine("Digite outro numero: ");
-//    decimal b = Convert.ToDecimal(Console.ReadLine()!);
-//    decimal resposta = a / b;
-//    Console.WriteLine(resposta);
-//}
-//catch (Exception  ex)
-//{
-//    Console.WriteLine($"Erro na divisao {ex:Message}");
-//}
-
-// Atividade 3
-
-
-try 
+using (HttpClient client = new HttpClient())    
 {
-    List<int> numeros = new List<int>
-{
-    1, 2, 3 ,4 ,5 ,6,7, 8, 9
-};
-
-    foreach (var numero in numeros)
+    try 
     {
-        if (numero.Equals(10)) 
-        {
-            Console.WriteLine($"Numero {numero} capturado");
-        }
+        string resposta = await client.GetStringAsync("https://anapioficeandfire.com/api/characters/542");
+        Console.WriteLine(resposta);
+    }catch (Exception ex)
+    {
+        Console.WriteLine($"Erro na busca {ex:message}");
     }
-} catch (FormatException ex)
-{
-    Console.WriteLine($"Numero nao encontrado {ex:Message}");
 }
-

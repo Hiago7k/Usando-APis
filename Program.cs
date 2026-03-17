@@ -34,12 +34,23 @@
 
 // Atividade 3
 
-List<int> numeros = new List<int> 
+
+try 
+{
+    List<int> numeros = new List<int>
 {
     1, 2, 3 ,4 ,5 ,6,7, 8, 9
 };
 
-for (int i = 3; i > 3; i--)
+    foreach (var numero in numeros)
+    {
+        if (numero.Equals(10)) 
+        {
+            Console.WriteLine($"Numero {numero} capturado");
+        }
+    }
+} catch (FormatException ex)
 {
-    Console.WriteLine(i);
+    Console.WriteLine($"Numero nao encontrado {ex:Message}");
 }
+
